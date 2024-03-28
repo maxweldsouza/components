@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {useContext} from "react";
-import {BoxSelectContext} from "@/components/BoxSelect";
+import {BoxSelectContext} from "./BoxSelect";
 
 const Option = styled.div`
   border-radius: 5px;

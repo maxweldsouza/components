@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {Bars2Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import styled from "styled-components";
-import NormalContainer from "@/components/NormalContainer";
+import NormalContainer from "./NormalContainer";
 
 const Icon = styled(Bars2Icon)`
   position: fixed;

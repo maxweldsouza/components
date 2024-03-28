@@ -2,8 +2,8 @@
 import React, {useState} from 'react';
 import {XMarkIcon} from "@heroicons/react/24/outline";
 import styled from "styled-components";
-import NormalContainer from "@/components/NormalContainer";
-import Backdrop from "@/components/Backdrop";
+import NormalContainer from "./NormalContainer";
+import Backdrop from "./Backdrop";
 
 const CloseIcon = styled(XMarkIcon)`
   position: fixed;
