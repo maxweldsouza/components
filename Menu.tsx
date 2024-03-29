@@ -27,8 +27,8 @@ const CloseIcon = styled(XMarkIcon)`
 `
 
 const Dialog = styled.div`
-  background-color: var(--dark-grey);
-  color: white;
+  background-color: var(--background);
+  color: var(--text-color);
   position: fixed;
   top: 0;
   left: 0;

@@ -3,11 +3,10 @@ import {useContext} from "react";
 import {BoxSelectContext} from "./BoxSelect";
 
 const Option = styled.div`
-  border-radius: 5px;
-  padding: 1em;
-  border: solid 2px #3a3a3a;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  border: var(--border);
 `
-
 
 function BoxSelectOption({children, ...props}) {
     const context = useContext(BoxSelectContext)

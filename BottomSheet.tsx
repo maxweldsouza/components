@@ -16,21 +16,20 @@ const CloseIcon = styled(XMarkIcon)`
 
 const Dialog = styled.div`
   border-radius: 10px;
-  background-color: black;
-  color: white;
+  background-color: var(--background);
+  color: var(--text-color);
   position: fixed;
   bottom: 0;
   left: 0;
   width: calc(100% - 4em);
   min-height: 50vh;
-  opacity: ${props => props.$show ? 1 : 1};
   visibility: ${props => props.$show ? 'visible' : 'hidden'};
   transform-origin: 100% 0;
   transform: ${props => props.$show ? 'scale(1) translateY(0) translateX(0)' : 'scale(1) translateY(100%) translateX(0vw)'};
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s;
-  box-shadow: 0px -20px 180px rgba(255, 248, 111, 0.4);
+  box-shadow: var(--bottom-sheet-shadow);
   margin: 2em;
-  z-index: 20; // TODO
+  z-index: var(--z-modal);
 `
 
 // TODO drag and drop bottom sheet

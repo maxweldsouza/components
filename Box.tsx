@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Box = styled.div`
   border: solid 1px #004229;
-  border-radius: 10px;
+  border-radius: var(border-radius-lg);
   width: max-content;
   padding: 1em;
 `

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CardHeader = styled.span`
   font-size: .9rem;
   font-weight: normal;
-  color: #ccc;
+  color: var(--text-color-light);
   text-transform: uppercase;
 `
 

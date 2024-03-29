@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Select = styled.div`
   display: flex;
-  gap: .5em;
+  gap: var(--gap-sm);
 `
 
 export const BoxSelectContext = React.createContext({

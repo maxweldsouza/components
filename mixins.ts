@@ -19,10 +19,10 @@ export const inlineIcon = css`
 export const inputStyles = css`
   display: block;
   font-size: 1rem;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   box-shadow: none;
   border: none;
-  background: var(--dark-grey);
+  background-color: var(--dark-grey);
   max-width: 100%;
   color: white;
   padding: 0.8em;
