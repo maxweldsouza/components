@@ -1,5 +1,6 @@
+import {css} from "styled-components";
 
-export default `
-  color: white;
-  font-size: 0.9rem;
+export default css`
+  color: ${p => p.theme.colors.white};
+  font-size: ${p => p.theme.fontSize.md};
 `

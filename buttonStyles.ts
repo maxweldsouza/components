@@ -1,14 +1,15 @@
+import {css} from "styled-components";
 
-export default `
-  border-radius: 5px;
-  color: white;
+export default css`
+  border-radius: ${p => p.theme.borderRadius.md};
+  color: ${p => p.theme.colors.white};
   font-size: 0.9rem;
   padding: .6em 1.2em;
   box-shadow: none;
   border: none;
   width: max-content;
   transition: background-color .2s ease;
-  background: #1e1e1e;
+  background: ${p => p.theme.colors.darkGrey};
 `
 
 // TODO reduced motion
