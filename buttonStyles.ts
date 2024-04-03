@@ -3,8 +3,7 @@ import {css} from "styled-components";
 export default css`
   border-radius: ${p => p.theme.borderRadius.md};
   color: ${p => p.theme.colors.white};
-  font-size: 0.9rem;
-  padding: .6em 1.2em;
+  padding: 5px 10px;
   box-shadow: none;
   border: none;
   width: max-content;
