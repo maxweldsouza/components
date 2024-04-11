@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-const ipcRenderer = window.electron.ipcRenderer;
+
+const { ipcRenderer } = window.electron;
 
 const useIpcRendererEvent = (eventName, handler: (...args: any[]) => void) => {
   useEffect(() => {
