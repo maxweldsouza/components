@@ -12,4 +12,5 @@ export default function initializeStore() {
       store.set(key, val);
     }
   });
+  return store;
 }
