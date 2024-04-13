@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import {IThemeProps} from "./theme";
 
 const Select = styled.div`
   display: flex;
-  gap: var(--gap-sm);
+  gap: ${(p: IThemeProps)=> p.theme.spacing.sm};
 `
 
 export const BoxSelectContext = React.createContext({

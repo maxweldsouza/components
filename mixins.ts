@@ -1,28 +1,28 @@
-import { css } from 'styled-components';
+import {IThemeProps} from "./theme";
 
 // TODO use stylesheet manager to filter props
-export const fadeInStyles = css`
-  visibility: ${(props) => (props.$show ? 'visible' : 'hidden')};
-  opacity: ${(props) => (props.$show ? '1' : '0')};
+export const fadeInStyles = (p) => `
+  visibility: ${p.$show ? 'visible' : 'hidden'};
+  opacity: ${p.$show ? '1' : '0'};
   transition:
     opacity 0.2s ease-in-out,
     visibility 0.2s;
 `;
 
-export const inlineIcon = css`
+export const inlineIcon = (p) => `
   display: inline;
   font-size: inherit;
   color: inherit;
   vertical-align: bottom;
 `;
 
-export const inputStyles = css`
+export const inputStyles = (p: IThemeProps) => `
   display: block;
   font-size: 1rem;
-  border-radius: var(--border-radius);
+  border-radius: ${p.theme.borderRadius.md};
   box-shadow: none;
   border: none;
-  background-color: var(--dark-grey);
+  background-color: ${p.theme.colors.background};
   max-width: 100%;
   color: white;
   padding: 0.8em;
@@ -32,7 +32,7 @@ export const inputStyles = css`
   }
 
   &:hover {
-    background: var(--light-grey);
+    background: ${p.theme.colors.background};
   }
   &:focus {
     background-color: white;

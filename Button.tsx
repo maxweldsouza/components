@@ -10,10 +10,6 @@ const Button = styled.button`
     transition: none;
   }
  
-  &:hover {
-    background: ${p => p.theme.colors.buttonHover};
-  } 
-  
 `
 
 export default Button;

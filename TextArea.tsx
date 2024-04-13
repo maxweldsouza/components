@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { inputStyles } from './mixins';
 
 const StyledTextArea = styled.textarea`
-  ${inputStyles}
+  ${p => inputStyles(p)}
 `;
 
 function TextArea({ children, ...props }) {

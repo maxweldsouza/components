@@ -5,20 +5,66 @@ const lightBlue: string = '#00609f';
 const red: string = '#9d1e1e';
 const greenGlow: string = 'rgba(111, 255, 242, 0.4)';
 const white: string = 'white';
+const black: string = 'black';
 
-const theme = {
+type ColorType = {
+    button: string;
+    buttonHover: string;
+    buttonBackground: string;
+    background: string;
+    background2: string;
+};
+
+type ThemeColors = {
+    colors: ColorType;
+};
+
+
+const light : ThemeColors = {
     colors: {
-        darkGrey: '#1e1e1e',
-        lightGrey: '#2a2a2a',
-        blue: '#005083',
-        red: '#9d1e1e',
-        greenGlow: 'rgba(111, 255, 242, 0.4)',
-        white: 'white',
-
         button: blue,
         buttonHover: lightBlue,
-        buttonBackground: white
+        buttonBackground: blue,
+        background: lightGrey,
+        background2: white
     },
+
+}
+const dark : ThemeColors = {
+    colors: {
+        button: blue,
+        buttonHover: lightBlue,
+        buttonBackground: blue,
+        background: black,
+        background2: darkGrey
+    },
+}
+
+type ThemeStructure = {
+    zIndex: {
+        modal: number;
+        backdrop: number;
+    };
+    shadows: {
+        bottomSheet: string;
+    };
+    borderRadius: {
+        md: string;
+        lg: string;
+    };
+    spacing: {
+        sm: string;
+        md: string;
+    };
+    border: {
+        md: string;
+    };
+    fontSize: {
+        md: string;
+    };
+};
+
+const theme : ThemeStructure = {
     zIndex: {
         modal: 20,
         backdrop: 10,
@@ -42,5 +88,20 @@ const theme = {
     }
 };
 
+type Theme = ThemeStructure & ThemeColors
+
+export interface IThemeProps {
+    theme: Theme
+}
+
+export const getTheme = (mode) : Theme => {
+    const colorTheme = mode === 'dark' ? dark : light
+    return {
+        ...colorTheme,
+        ...theme
+    }
+}
+
+// TODO remove
 export default theme;
 
