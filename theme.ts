@@ -1,12 +1,23 @@
+const darkGrey: string = '#1e1e1e';
+const lightGrey: string = '#2a2a2a';
+const blue: string = '#005083';
+const lightBlue: string = '#00609f';
+const red: string = '#9d1e1e';
+const greenGlow: string = 'rgba(111, 255, 242, 0.4)';
+const white: string = 'white';
+
 const theme = {
     colors: {
         darkGrey: '#1e1e1e',
         lightGrey: '#2a2a2a',
         blue: '#005083',
-        lightBlue: '#00609f',
         red: '#9d1e1e',
         greenGlow: 'rgba(111, 255, 242, 0.4)',
-        white: 'white'
+        white: 'white',
+
+        button: blue,
+        buttonHover: lightBlue,
+        buttonBackground: white
     },
     zIndex: {
         modal: 20,

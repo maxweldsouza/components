@@ -5,7 +5,7 @@ import buttonStyles from "./buttonStyles";
 import ButtonText from "./ButtonText";
 
 const Custom = styled(Pressable)`
-  ${buttonStyles}
+  ${p => buttonStyles(p)}
 `
 
 const Button = (props) => {
