@@ -8,10 +8,10 @@ const Custom = styled(Pressable)`
   ${buttonStyles}
 `
 
-const Button = ({children,}) => {
+const Button = (props) => {
     return <Custom>
         <ButtonText>
-            {children}
+            {props.children}
         </ButtonText>
     </Custom>
 }

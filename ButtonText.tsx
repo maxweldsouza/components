@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from "styled-components/native";
 import buttonTextStyles from "./buttonTextStyles";
 
-const ButtonTextWeb = styled.div`
+const ButtonText = styled.Text`
     ${buttonTextStyles}
 `
 
-export default ButtonTextWeb;
+export default ButtonText;
