@@ -6,7 +6,7 @@ import {IThemeProps} from "./theme";
 const Option = styled.div`
   border-radius: ${(p: IThemeProps)=> p.theme.borderRadius.md};
   padding: ${(p: IThemeProps)=> p.theme.spacing.md};
-  border: ${(p: IThemeProps)=> p.theme.border};
+  border: ${(p: IThemeProps)=> p.theme.border.md};
 `
 
 function BoxSelectOption({children, ...props}) {
