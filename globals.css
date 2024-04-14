@@ -58,57 +58,57 @@ a {
   color: unset;
 }
 
-:root {
+/*:root {*/
 
-  --dark-grey: #1e1e1e;
-  --light-grey: #2a2a2a;
-  --blue: #005083;
-  --light-blue: #00609f;
-  --red: #9d1e1e;
-  --green-glow: rgba(111, 255, 242, 0.4);
+/*  --dark-grey: #1e1e1e;*/
+/*  --light-grey: #2a2a2a;*/
+/*  --blue: #005083;*/
+/*  --light-blue: #00609f;*/
+/*  --red: #9d1e1e;*/
+/*  --green-glow: rgba(111, 255, 242, 0.4);*/
 
-  --z-modal: 20;
-  --z-backdrop: 10;
+/*  --z-modal: 20;*/
+/*  --z-backdrop: 10;*/
 
-  --bottom-sheet-shadow: 0px -20px 180px rgba(255, 248, 111, 0.4);
+/*  --bottom-sheet-shadow: 0px -20px 180px rgba(255, 248, 111, 0.4);*/
 
-  --border-radius: 4px;
-  --border-radius-lg: 16px;
+/*  --border-radius: 4px;*/
+/*  --border-radius-lg: 16px;*/
 
-  --gap-sm: .5em;
+/*  --gap-sm: .5em;*/
 
-  --padding: 1em;
-  --border: solid 2px #3a3a3a;
-}
+/*  --padding: 1em;*/
+/*  --border: solid 2px #3a3a3a;*/
+/*}*/
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: white;
-    --input-background: white;
-    --text-color: var(--dark-grey);
-    --text-color-dark: #ccc;
-    --card-shadow: 0px 4px 40px rgba(0, 0, 0, 0.19);
-  }
-}
+/*@media (prefers-color-scheme: light) {*/
+/*  :root {*/
+/*    --background: white;*/
+/*    --input-background: white;*/
+/*    --text-color: var(--dark-grey);*/
+/*    --text-color-dark: #ccc;*/
+/*    --card-shadow: 0px 4px 40px rgba(0, 0, 0, 0.19);*/
+/*  }*/
+/*}*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--dark-grey);
-    --input-background: var(--light-grey);
-    --text-color: white;
-    --card-shadow: 0px 4px 40px var(--green-glow);
-  }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: var(--dark-grey);*/
+/*    --input-background: var(--light-grey);*/
+/*    --text-color: white;*/
+/*    --card-shadow: 0px 4px 40px var(--green-glow);*/
+/*  }*/
+/*}*/
 
 body {
-  color: var(--text-color);
-  background: var(--background);
+  /*color: var(--text-color);*/
+  /*background: var(--background);*/
   font-family: Inter, sans-serif;
 }
-.container {
-  padding: 1em;
-  margin: 0 auto;
-}
+/*.container {*/
+/*  padding: 1em;*/
+/*  margin: 0 auto;*/
+/*}*/
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;

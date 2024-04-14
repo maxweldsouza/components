@@ -1,10 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { IThemeProps } from './theme';
 
 const Container = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
-  padding: 2em 2em;
-  gap: 1em;
-`
+  padding: ${(p: IThemeProps) => p.theme.spacing.lg};
+  gap: ${(p: IThemeProps) => p.theme.spacing.lg};
+  background-color: ${(p: IThemeProps) => p.theme.colors.background};
+  color: ${(p) => p.theme.colors.text};
+  min-height: 100dvh;
+`;
 
-export default Container
+export default Container;
