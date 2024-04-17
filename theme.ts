@@ -64,6 +64,7 @@ type ThemeStructure = {
     sm: string;
     md: string;
     lg: string;
+    xl: string;
   };
   border: {
     md: string;
@@ -90,6 +91,7 @@ const theme: ThemeStructure = {
     sm: '8px',
     md: '16px',
     lg: '32px',
+    xl: '48px',
   },
   border: {
     md: 'solid 2px #3a3a3a',

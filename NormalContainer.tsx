@@ -9,7 +9,7 @@ const Container = styled.div`
   gap: ${(p: IThemeProps) => p.theme.spacing.lg};
   background-color: ${(p: IThemeProps) => p.theme.colors.background};
   color: ${(p) => p.theme.colors.text};
-  min-height: 100dvh;
+  height: 100%;
 `;
 
 export default Container;
