@@ -1,8 +1,10 @@
-const darkGrey: string = 'hsl(0, 0%, 5%)';
-const darkGrey2: string = 'hsl(0, 0%, 10%)';
-const lightGrey3: string = 'hsl(0, 0%, 70%)';
-const lightGrey2: string = 'hsl(0, 0%, 80%)';
-const lightGrey: string = 'hsl(0, 0%, 90%)';
+const darkGrey5: string = 'hsl(0, 0%, 5%)';
+const darkGrey10: string = 'hsl(0, 0%, 10%)';
+const darkGrey20: string = 'hsl(0, 0%, 20%)';
+const lightGrey70: string = 'hsl(0, 0%, 70%)';
+const lightGrey80: string = 'hsl(0, 0%, 80%)';
+const lightGrey90: string = 'hsl(0, 0%, 90%)';
+const lightGrey95: string = 'hsl(0, 0%, 95%)';
 const blue: string = '#005083';
 const lightBlue: string = '#00609f';
 const red: string = '#9d1e1e';
@@ -29,10 +31,10 @@ const light: ThemeColors = {
     button: blue,
     buttonHover: lightBlue,
     buttonBackground: blue,
-    background: lightGrey,
+    background: lightGrey95,
     background2: white,
-    text: darkGrey,
-    text2: darkGrey2,
+    text: darkGrey10,
+    text2: darkGrey20,
   },
 };
 const dark: ThemeColors = {
@@ -40,10 +42,10 @@ const dark: ThemeColors = {
     button: blue,
     buttonHover: lightBlue,
     buttonBackground: blue,
-    background: darkGrey,
-    background2: darkGrey2,
+    background: darkGrey5,
+    background2: darkGrey10,
     text: white,
-    text2: lightGrey3,
+    text2: lightGrey70,
   },
 };
 
