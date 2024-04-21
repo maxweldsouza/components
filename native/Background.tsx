@@ -4,7 +4,7 @@ import {View} from "react-native";
 
 const Background = styled(View)`
   flex: 1;
-  background-color: black;
+  background-color: ${p => p.theme.colors.background};
   align-items: center;
   justify-content: center;
   width: 100%;
