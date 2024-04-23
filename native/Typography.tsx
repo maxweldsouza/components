@@ -7,7 +7,7 @@ export const H1Text = styled(Text)`
 `
 
 export const Txt = styled(Text) `
-    color: ${p => p.theme.colors.text} 
+    color: ${p => p.theme.colors.text};
 `
 
 export const H1 = function ({ children }) {

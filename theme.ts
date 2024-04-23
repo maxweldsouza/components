@@ -9,6 +9,8 @@ const blue: string = '#005083';
 const lightBlue: string = '#00609f';
 const red: string = '#9d1e1e';
 const greenGlow: string = 'rgba(111, 255, 242, 0.4)';
+const shadow: string = 'hsla(0,0%,0%,0.1)';
+// const shadow: string = 'rgba(0, 0, 0, 0.4)';
 const white: string = 'white';
 const black: string = 'black';
 
@@ -24,6 +26,10 @@ type ColorType = {
 
 type ThemeColors = {
   colors: ColorType;
+  shadows: {
+    bottomSheet: string;
+    lg: string;
+  };
 };
 
 const light: ThemeColors = {
@@ -36,6 +42,10 @@ const light: ThemeColors = {
     text: darkGrey10,
     text2: darkGrey20,
   },
+  shadows: {
+    lg: `0px 4px 40px ${shadow}`,
+    bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
+  },
 };
 const dark: ThemeColors = {
   colors: {
@@ -47,15 +57,16 @@ const dark: ThemeColors = {
     text: white,
     text2: lightGrey70,
   },
+  shadows: {
+    lg: `0px 4px 40px ${greenGlow}`,
+    bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
+  },
 };
 
 type ThemeStructure = {
   zIndex: {
     modal: number;
     backdrop: number;
-  };
-  shadows: {
-    bottomSheet: string;
   };
   borderRadius: {
     sm: string;
@@ -80,9 +91,6 @@ const theme: ThemeStructure = {
   zIndex: {
     modal: 20,
     backdrop: 10,
-  },
-  shadows: {
-    bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
   },
   borderRadius: {
     sm: '4px',
