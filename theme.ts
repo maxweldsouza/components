@@ -82,8 +82,11 @@ type ThemeStructure = {
   border: {
     md: string;
   };
-  fontSize: {
-    md: string;
+  font: {
+    family: string;
+    size: {
+      md: string;
+    }
   };
 };
 
@@ -106,8 +109,11 @@ const theme: ThemeStructure = {
   border: {
     md: 'solid 2px #3a3a3a',
   },
-  fontSize: {
-    md: '16px',
+  font: {
+    family: 'sans-serif',
+    size: {
+      md: '16px',
+    }
   },
 };
 
