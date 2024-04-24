@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import {IThemeProps} from "./theme";
+import {IThemeProps} from "../theme";
 
 const Backdrop = styled.View`
   position: fixed;

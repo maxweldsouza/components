@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {IThemeProps} from "./theme";
+import {IThemeProps} from "../theme";
 
 const Backdrop = styled.div`
   position: fixed;

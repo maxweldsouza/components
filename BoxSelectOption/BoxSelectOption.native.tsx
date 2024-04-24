@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import {useContext} from "react";
 import {BoxSelectContext} from "./BoxSelect";
-import {IThemeProps} from "./theme";
+import {IThemeProps} from "../theme";
 
 const Option = styled.View`
   border-radius: ${(p: IThemeProps)=> p.theme.borderRadius.md};

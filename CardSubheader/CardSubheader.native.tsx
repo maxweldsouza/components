@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components/native";
 import {Text} from 'react-native'
-import {IThemeProps} from "./theme";
+import {IThemeProps} from "../theme";
 
 const CardHeader = styled(Text)`
   font-size: .9rem;
