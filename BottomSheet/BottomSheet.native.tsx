@@ -1,7 +1,7 @@
 'use client'
 import React, {useState} from 'react';
 import {XMarkIcon} from "@heroicons/react/24/outline";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import NormalContainer from "./NormalContainer";
 import Backdrop from "./Backdrop";
 

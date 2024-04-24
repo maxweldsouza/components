@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 import {useContext} from "react";
 import {BoxSelectContext} from "./BoxSelect";
 import {IThemeProps} from "./theme";
