@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import { IThemeProps } from './theme';
+import {View} from "react-native";
 
-const Container = styled.div`
+const Container = styled(View)`
   display: flex;
   flex: 1;
   flex-direction: column;

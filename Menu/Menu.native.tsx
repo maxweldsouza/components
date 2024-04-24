@@ -1,32 +1,23 @@
-'use client'
-import React, {useState} from 'react';
-import {Bars2Icon, XMarkIcon} from "@heroicons/react/24/outline";
-import styled from "styled-components";
-import NormalContainer from "../NormalContainer";
-
-const Icon = styled(Bars2Icon)`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 2rem;
-  width: 2rem;
-  padding: 1.5em 2em;
-  transition: transform 0.2s ease;
-  &:hover {
-    transform: scaleX(1.2);
-  }
-`
+import React from 'react';
+import {XMarkIcon} from "@heroicons/react/24/outline";
+import styled from "styled-components/native";
+import NormalContainer from "../NormalContainer/NormalContainer";
+import {Icon} from "./Icon";
+import {View} from "react-native";
 
 const CloseIcon = styled(XMarkIcon)`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 2rem;
-  width: 2rem;
-  padding: 1.5em 2em;
+  //position: fixed;
+  //top: 0;
+  //right: 0;
+  //height: 2rem;
+  //width: 2rem;
+  //padding: 1.5em 2em;
 `
 
-const Dialog = styled.div`
+const Dialog = styled(View)`
+`
+/*
+
   background-color: var(--background);
   color: var(--text-color);
   position: fixed;
@@ -39,22 +30,22 @@ const Dialog = styled.div`
   transform-origin: 100% 0;
   transform: ${props => props.$show ? 'scale(1) translateY(0) translateX(0)' : 'scale(0) translateY(-0vh) translateX(0vw)'};
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s;
-`
+ */
 
 function Menu({ open, setOpen, children }) {
     return (
-        <div>
+        <View>
             <Icon onClick={e => {
                 console.log('e ', e);
                 setOpen(true)
             }}/>
             <Dialog $show={open}>
                 <NormalContainer>
-                <CloseIcon onClick={() => setOpen(false)}/>
-                {children}
+                    <CloseIcon onClick={() => setOpen(false)}/>
+                    {children}
                 </NormalContainer>
             </Dialog>
-        </div>
+        </View>
     );
 }
 
