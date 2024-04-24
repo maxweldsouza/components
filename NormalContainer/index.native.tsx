@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { IThemeProps } from './theme';
+import styled from 'styled-components/native';
+import { IThemeProps } from '../theme';
 import {View} from "react-native";
 
 const Container = styled(View)`

@@ -25,10 +25,13 @@ const Dialog = styled(View)`
   height: 100dvh;
   opacity: ${props => props.$show ? 1 : 0};
   visibility: ${props => props.$show ? 'visible' : 'hidden'};
+`
+/*
   transform-origin: 100% 0;
   transform: ${props => props.$show ? 'scale(1) translateY(0) translateX(0)' : 'scale(0) translateY(-0vh) translateX(0vw)'};
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s;
-`
+
+ */
 
 function Menu({ open, setOpen, children }) {
     return (

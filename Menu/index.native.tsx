@@ -1,18 +1,18 @@
 import React from 'react';
-import {XMarkIcon} from "@heroicons/react/24/outline";
+// import {XMarkIcon} from "@heroicons/react/24/outline";
 import styled from "styled-components/native";
 import NormalContainer from "../NormalContainer";
-import {Icon} from "./Icon";
+// import {Icon} from "./Icon";
 import {View} from "react-native";
 
-const CloseIcon = styled(XMarkIcon)`
+// const CloseIcon = styled(XMarkIcon)`
   //position: fixed;
   //top: 0;
   //right: 0;
   //height: 2rem;
   //width: 2rem;
   //padding: 1.5em 2em;
-`
+// `
 
 const Dialog = styled(View)`
 `
@@ -35,13 +35,13 @@ const Dialog = styled(View)`
 function Menu({ open, setOpen, children }) {
     return (
         <View>
-            <Icon onClick={e => {
-                console.log('e ', e);
-                setOpen(true)
-            }}/>
+            {/*<Icon onClick={e => {*/}
+            {/*    console.log('e ', e);*/}
+            {/*    setOpen(true)*/}
+            {/*}}/>*/}
             <Dialog $show={open}>
                 <NormalContainer>
-                    <CloseIcon onClick={() => setOpen(false)}/>
+                    {/*<CloseIcon onClick={() => setOpen(false)}/>*/}
                     {children}
                 </NormalContainer>
             </Dialog>

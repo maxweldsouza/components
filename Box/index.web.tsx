@@ -1,12 +1,9 @@
 import React from 'react';
-import styled from "styled-components/native";
-import {IThemeProps} from "../theme";
+import styled from "styled-components";
+import styles from "./styles";
 
-const Box = styled.View`
-  border: ${(p: IThemeProps) => p.theme.border.sm};
-  border-radius: ${(p: IThemeProps) => p.theme.borderRadius.md};
-  width: max-content;
-  padding: 1em;
+const Box = styled.div`
+    ${styles}
 `
 
 export default Box;
