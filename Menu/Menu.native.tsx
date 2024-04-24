@@ -1,7 +1,7 @@
 import React from 'react';
 import {XMarkIcon} from "@heroicons/react/24/outline";
 import styled from "styled-components/native";
-import NormalContainer from "../NormalContainer/NormalContainer";
+import NormalContainer from "../NormalContainer";
 import {Icon} from "./Icon";
 import {View} from "react-native";
 
