@@ -80,6 +80,7 @@ type ThemeStructure = {
     xl: string;
   };
   border: {
+    sm: string;
     md: string;
   };
   font: {
@@ -107,7 +108,8 @@ const theme: ThemeStructure = {
     xl: '48px',
   },
   border: {
-    md: 'solid 2px #3a3a3a',
+    sm: `solid 1px ${lightGrey80}`,
+    md: `solid 2px ${darkGrey10}`,
   },
   font: {
     family: 'sans-serif',
