@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components/native";
 
-const Card = styled.div`
+const Card = styled.View`
   background: var(--background);
   border-radius: var(--border-radius);
   padding: 1.5em;

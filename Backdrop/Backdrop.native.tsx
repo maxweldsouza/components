@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import {IThemeProps} from "./theme";
 
-const Backdrop = styled.div`
+const Backdrop = styled.View`
   position: fixed;
   width: 100%;
   height: 100dvh;

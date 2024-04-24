@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-const Container = styled.div`
+const Container = styled.View`
   display: flex;
   width: 100%;
   flex-direction: column;

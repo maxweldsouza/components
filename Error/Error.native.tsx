@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components/native";
 
-const ErrorContainer = styled.div`
+const ErrorContainer = styled.View`
   display: flex;
   padding: 1em;
   border-radius: 5px;

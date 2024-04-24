@@ -14,7 +14,7 @@ const CloseIcon = styled(XMarkIcon)`
   padding: 1.5em 2em;
 `
 
-const Dialog = styled.div`
+const Dialog = styled.View`
   border-radius: 10px;
   background-color: var(--background);
   color: var(--text-color);

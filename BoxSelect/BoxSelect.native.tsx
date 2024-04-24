@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components/native";
 import {IThemeProps} from "./theme";
 
-const Select = styled.div`
+const Select = styled.View`
   display: flex;
   gap: ${(p: IThemeProps)=> p.theme.spacing.sm};
 `
