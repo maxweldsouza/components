@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
-import { ThemeProvider } from "styled-components/native";
+import { ThemeProvider, css } from "styled-components/native";
 
-export { ThemeProvider }
+export { ThemeProvider, css }
 export default styled
 

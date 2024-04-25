@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {View} from "react-native";
 
-const Background = styled(View)`
+const IndexWeb = styled(View)`
   flex: 1;
   background-color: ${p => p.theme.colors.background};
   align-items: center;
@@ -10,4 +10,4 @@ const Background = styled(View)`
   width: 100%;
 `
 
-export default Background;
+export default IndexWeb;
