@@ -1,10 +1,11 @@
 import {css} from "styled-components";
+import boxShadow from '../box-shadow'
 
 export default css`
+  ${boxShadow};
   background: ${p => p.theme.colors.background};
   border-radius: ${p => p.theme.borderRadius.lg};
   padding: ${p => p.theme.spacing.lg};
-  box-shadow: ${p => p.theme.shadows.lg};
   display: flex;
   flex-direction: column;
   gap: ${p => p.theme.spacing.md};
