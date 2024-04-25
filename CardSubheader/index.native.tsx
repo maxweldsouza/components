@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from "styled-components/native";
 import {Text} from 'react-native'
-import {IThemeProps} from "../theme";
+import styles from "./styles";
 
-const CardHeader = styled(Text)`
-  font-size: .9rem;
-  font-weight: normal;
-  font-family: ${(p: IThemeProps) => p.theme.font.family};
-  color: var(--text-color-light);
-  text-transform: uppercase;
+const CardSubHeader = styled(Text)`
+  ${styles}
 `
 
-export default CardHeader;
+export default CardSubHeader;
