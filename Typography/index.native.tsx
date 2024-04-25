@@ -16,13 +16,13 @@ export const Txt = styled(Text)`
 `
 
 export const H1 = function ({children}) {
-    return <H1Text accessibilityRole="heading" aria-level="1">
+    return <H1Text accessibilityRole="header" aria-level="1">
         {children}
     </H1Text>
 }
 
 export const H2 = function ({children}) {
-    return <H2Text accessibilityRole="heading" aria-level="2" >
+    return <H2Text accessibilityRole="header" aria-level="2" >
         {children}
     </H2Text>
 }

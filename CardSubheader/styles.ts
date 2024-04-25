@@ -1,5 +1,6 @@
 import {IThemeProps} from "../theme";
-export default `
+import {css} from "../styled-components";
+export default css`
   font-weight: normal;
   font-family: ${(p: IThemeProps) => p.theme.font.family};
   color: ${(p: IThemeProps) => p.theme.colors.text};
