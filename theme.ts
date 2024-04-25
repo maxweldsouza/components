@@ -86,7 +86,10 @@ type ThemeStructure = {
   font: {
     family: string;
     size: {
+      sm: string;
       md: string;
+      lg: string;
+      xl: string;
     }
   };
 };
@@ -114,7 +117,10 @@ const theme: ThemeStructure = {
   font: {
     family: 'sans-serif',
     size: {
-      md: '16px',
+      sm: '12px',
+      md: '14px',
+      lg: '16px',
+      xl: '18px',
     }
   },
 };

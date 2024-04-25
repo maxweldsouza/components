@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from "react-native";
-import styled from "styled-components";
+import styled from "../styled-components";
 
 export const H1Text = styled(Text)`
   font-family: sans-serif;
@@ -8,8 +8,10 @@ export const H1Text = styled(Text)`
 `
 
 export const H2Text = styled(Text)`
+  font-family: sans-serif;
   font-size: 28px;
   font-weight: bold;
+  color: red;
 `
 
 export const Txt = styled(Text)`
@@ -24,7 +26,7 @@ export const H1 = function ({children}) {
 }
 
 export const H2 = function ({children}) {
-    return <H2Text accessibilityRole="heading" aria-level="2">
+    return <H2Text accessibilityRole="heading" aria-level="2" >
         {children}
     </H2Text>
 }
