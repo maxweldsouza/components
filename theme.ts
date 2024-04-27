@@ -37,7 +37,7 @@ const light: ThemeColors = {
     button: blue,
     buttonHover: lightBlue,
     buttonBackground: blue,
-    background: lightGrey95,
+    background: white,
     background2: white,
     text: darkGrey10,
     text2: darkGrey20,

@@ -3,11 +3,8 @@ import {IThemeProps} from "../theme";
 
 export default css`
   display: flex;
-  flex: 1;
+  width: 40%;
   flex-direction: column;
-  padding: ${(p: IThemeProps) => p.theme.spacing.lg};
+  padding: ${(p: IThemeProps) => p.theme.spacing.md} 0;
   gap: ${(p: IThemeProps) => p.theme.spacing.md};
-  background-color: ${(p: IThemeProps) => p.theme.colors.background};
-  color: ${(p) => p.theme.colors.text};
-  height: 100%;
 `
