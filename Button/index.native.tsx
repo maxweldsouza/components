@@ -1,15 +1,18 @@
-'use client'
 import React from 'react';
-import styled from 'styled-components'
+import styled from '../styled-components'
 import buttonStyles from "./buttonStyles";
+import ButtonText from "../ButtonText";
 
-const Button = styled.button`
+const Button = styled.Pressable`
   ${buttonStyles};
-  transition: background-color .2s ease;
-  @media (prefers-reduced-motion) {
-    transition: none;
-  }
- 
 `
 
-export default Button;
+function NativeButton({ onClick, children, ...props}) {
+  return (
+      <Button onPress={onClick}>
+        <ButtonText>{children}</ButtonText>
+      </Button>
+  );
+}
+
+export default NativeButton;

@@ -20,6 +20,6 @@ export const shadow2xl = css`
   shadow-offset: 0px 25px;
   shadow-opacity: 0.05;
   shadow-radius: 50px;
-  elevation: 1;
   overflow: visible;
+  elevation: 1;
 `
