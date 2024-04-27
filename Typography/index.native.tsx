@@ -1,14 +1,15 @@
 import React from 'react';
 import {View, Text} from "react-native";
 import styled from "../styled-components";
+import {IThemeProps} from "../theme";
 
 export const H1Text = styled(Text)`
-  font-size: 30px;
+  font-size: ${(p: IThemeProps) => p.theme.font.size.xl};
   font-weight: bold;
 `
 
 export const H2Text = styled(Text)`
-  font-size: 28px;
+  font-size: ${(p: IThemeProps) => p.theme.font.size.lg};
 `
 
 export const Txt = styled(Text)`

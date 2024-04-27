@@ -10,7 +10,5 @@ export default css`
   flex-direction: column;
   gap: ${p => p.theme.spacing.md};
   transition: box-shadow 0.2s ease;
-  &:hover {
-    //box-shadow: 0px 4px 80px var(--green-glow);
-  }
+  width: 100%;
 `

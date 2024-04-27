@@ -5,6 +5,7 @@ import Base from './Base'
 import {IThemeProps} from "../theme";
 
 export const H1 = styled(Base)`
+  font-weight: bold;
   font-size: ${(p: IThemeProps) => p.theme.font.size.xl};
 `
 
