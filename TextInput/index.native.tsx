@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { inputStyles } from './mixins';
+import styled from '../styled-components';
+import styles from "./styles";
 
-const Input = styled.input`
-  ${p => inputStyles(p)}
+const Input = styled.TextInput`
+ ${styles}
 `;
 
 export default Input;

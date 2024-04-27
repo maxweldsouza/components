@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import {IThemeProps} from "../theme";
+import styles from "./styles";
 
 const Form = styled.form`
-  display: flex;
-  gap: 2em;
-  flex-direction: column;
+    ${styles}
 `
 
 export default Form;

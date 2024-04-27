@@ -74,6 +74,7 @@ type ThemeStructure = {
     lg: string;
   };
   spacing: {
+    xs: string;
     sm: string;
     md: string;
     lg: string;
@@ -105,6 +106,7 @@ const theme: ThemeStructure = {
     lg: '16px',
   },
   spacing: {
+    xs: '4px',
     sm: '8px',
     md: '16px',
     lg: '32px',
