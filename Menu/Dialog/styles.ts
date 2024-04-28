@@ -8,7 +8,7 @@ export default css`
   left: 0;
   width: 100%;
   height: 100dvh;
-  opacity: ${props => props.$show ? 1 : 0};
-  visibility: ${props => props.$show ? 'visible' : 'hidden'};
+  opacity: ${props => props.visible ? 1 : 0};
+  visibility: ${props => props.visible ? 'visible' : 'hidden'};
   z-index: ${(p: IThemeProps) => p.theme.zIndex.backdrop};
 `

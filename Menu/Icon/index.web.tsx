@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Bars2Icon} from "@heroicons/react/24/outline";
+import {Bars2Icon} from "../../heroicons";
 
 export const Icon = styled(Bars2Icon)`
   position: fixed;
