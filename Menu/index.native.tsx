@@ -1,16 +1,11 @@
 import React from 'react';
-// import {XMarkIcon} from "@heroicons/react/24/outline";
 import styled from "styled-components/native";
 import NormalContainer from "../NormalContainer";
 import {Icon} from "./Icon";
 import {View, Text, Pressable} from "react-native";
 import Dialog from "./Dialog";
-import { XMarkIcon } from '../heroicons'
 import {Bars2Icon} from "../heroicons";
-
-const CloseIcon = styled(XMarkIcon)`
-    color: black;
-`
+import CloseIcon from "./CloseIcon";
 
 function Menu({ open, setOpen, children }) {
     return (

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Bars2Icon} from "../../heroicons";
+import {IThemeProps} from "../../theme";
 
 export const Icon = styled(Bars2Icon)`
   position: fixed;

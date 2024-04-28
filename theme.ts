@@ -5,8 +5,8 @@ const lightGrey70: string = 'hsl(0, 0%, 70%)';
 const lightGrey80: string = 'hsl(0, 0%, 80%)';
 const lightGrey90: string = 'hsl(0, 0%, 90%)';
 const lightGrey95: string = 'hsl(0, 0%, 95%)';
-const blue: string = '#005083';
-const lightBlue: string = '#00609f';
+const blue: string = '#1c6493';
+const lightBlue: string = '#408cbd';
 const red: string = '#9d1e1e';
 const greenGlow: string = 'rgba(111, 255, 242, 0.4)';
 const shadow: string = 'hsla(0,0%,0%,0.3)';
@@ -22,6 +22,7 @@ type ColorType = {
   background2: string;
   text: string;
   text2: string;
+  revText: string;
 };
 
 type ThemeColors = {
@@ -41,6 +42,7 @@ const light: ThemeColors = {
     background2: white,
     text: darkGrey10,
     text2: darkGrey20,
+    revText: white,
   },
   shadows: {
     lg: `0px 4px 40px ${shadow}`,
@@ -56,6 +58,7 @@ const dark: ThemeColors = {
     background2: darkGrey10,
     text: white,
     text2: lightGrey70,
+    revText: white
   },
   shadows: {
     lg: `0px 4px 40px ${greenGlow}`,
@@ -67,6 +70,8 @@ type ThemeStructure = {
   zIndex: {
     modal: number;
     backdrop: number;
+    closeIcon: number;
+    menuIcon: number;
   };
   borderRadius: {
     sm: string;
@@ -97,7 +102,9 @@ type ThemeStructure = {
 
 const theme: ThemeStructure = {
   zIndex: {
-    modal: 20,
+    closeIcon: 40,
+    modal: 30,
+    menuIcon: 20,
     backdrop: 10,
   },
   borderRadius: {

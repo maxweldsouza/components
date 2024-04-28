@@ -3,7 +3,7 @@ import styled from "../styled-components";
 import buttonTextStyles from "./buttonTextStyles";
 
 const ButtonText = styled.Text`
-    ${buttonTextStyles}
+  ${buttonTextStyles}
 `
 
 export default ButtonText;

@@ -3,6 +3,6 @@ import {IThemeProps} from "../theme";
 
 export default css`
   display: flex;
-  gap: ${(p: IThemeProps) => p.theme.spacing.sm};
+  gap: ${(p: IThemeProps) => p.theme.spacing.md};
   flex-direction: column;
 `
