@@ -7,10 +7,10 @@ const Button = styled.Pressable`
   ${buttonStyles};
 `
 
-function NativeButton({ onClick, children, ...props}) {
+function NativeButton({ onClick, secondary, children, ...props}) {
   return (
       <Button onPress={onClick}>
-        <ButtonText>{children}</ButtonText>
+        <ButtonText secondary>{children}</ButtonText>
       </Button>
   );
 }

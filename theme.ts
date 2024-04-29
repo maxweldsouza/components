@@ -120,7 +120,7 @@ const theme: ThemeStructure = {
     xl: '48px',
   },
   border: {
-    sm: `solid 1px ${lightGrey80}`,
+    sm: `solid 1px ${lightGrey90}`,
     md: `solid 2px ${darkGrey10}`,
   },
   font: {

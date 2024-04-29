@@ -2,12 +2,12 @@
 import React from 'react';
 import styled from 'styled-components'
 import buttonStyles from "./buttonStyles";
-import {IThemeProps} from "../theme";
+import buttonTextStyles from "../ButtonText/buttonTextStyles";
 
 const Button = styled.button`
   ${buttonStyles};
+  ${buttonTextStyles};
   transition: background-color .2s ease;
-  color: ${(p: IThemeProps) => p.theme.colors.revText};
   @media (prefers-reduced-motion) {
     transition: none;
   }

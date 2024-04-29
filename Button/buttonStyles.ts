@@ -6,7 +6,11 @@ export default css`
   padding: ${(p: IThemeProps) => p.theme.spacing.md};
   border: none;
   width: max-content;
-  background: ${p => p.theme.colors.buttonBackground};
+  ${(p) => p.secondary ? `
+      background: ${p => p.theme.colors.background};
+  ` : `
+      background: ${p => p.theme.colors.buttonBackground};
+  `}
   
 `
 
