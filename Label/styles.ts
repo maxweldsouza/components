@@ -1,5 +1,4 @@
 import { css } from 'styled-components';
-import boxShadow from '../box-shadow';
 
 export default css`
   color: ${(p) => p.theme.colors.text2};
