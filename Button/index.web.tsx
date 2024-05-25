@@ -11,7 +11,7 @@ const Button = styled.button`
   @media (prefers-reduced-motion) {
     transition: none;
   }
- 
+
 `
 
 export default Button;

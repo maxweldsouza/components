@@ -1,5 +1,5 @@
-import {css} from "../styled-components";
-import {IThemeProps} from "../theme";
+import { css } from '../styled-components';
+import { IThemeProps } from '../theme';
 
 export default css`
   display: flex;
@@ -9,4 +9,4 @@ export default css`
   gap: ${(p: IThemeProps) => p.theme.spacing.md};
   background-color: ${(p: IThemeProps) => p.theme.colors.background};
   color: ${(p) => p.theme.colors.text};
-`
+`;

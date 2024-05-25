@@ -1,16 +1,16 @@
-import {css} from "styled-components";
-import boxShadow from '../box-shadow'
+import { css } from 'styled-components';
+import boxShadow from '../box-shadow';
 
 export default css`
   ${boxShadow};
-  background: ${p => p.theme.colors.background};
-  border-radius: ${p => p.theme.borderRadius.lg};
-  padding: ${p => p.theme.spacing.lg};
+  background: ${(p) => p.theme.colors.background};
+  border-radius: ${(p) => p.theme.borderRadius.lg};
+  padding: ${(p) => p.theme.spacing.lg};
   display: flex;
   flex-direction: column;
-  gap: ${p => p.theme.spacing.md};
+  gap: ${(p) => p.theme.spacing.md};
   transition: box-shadow 0.2s ease;
-`
+`;
 /*
   &:hover {
     //box-shadow: 0px 4px 80px var(--green-glow);
