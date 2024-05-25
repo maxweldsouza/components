@@ -8,10 +8,10 @@ const lightGrey95: string = 'hsl(0, 0%, 95%)';
 const blue: string = '#1c6493';
 const lightBlue: string = '#408cbd';
 const red: string = '#9d1e1e';
-const greenGlow: string = 'rgba(111, 255, 242, 0.4)';
+const greenGlow: string = 'rgba(111,178,255,0.4)';
 const shadow: string = 'hsla(0,0%,0%,0.3)';
 // const shadow: string = 'rgba(0, 0, 0, 0.4)';
-const white: string = 'white';
+const white: string = 'hsl(0,0%,100%)';
 const black: string = 'black';
 
 type ColorType = {
@@ -42,7 +42,7 @@ const light: ThemeColors = {
     background2: white,
     text: darkGrey10,
     text2: darkGrey20,
-    revText: white,
+    revText: lightGrey95,
   },
   shadows: {
     lg: `0px 4px 40px ${shadow}`,
@@ -56,9 +56,9 @@ const dark: ThemeColors = {
     buttonBackground: blue,
     background: darkGrey5,
     background2: darkGrey10,
-    text: white,
+    text: lightGrey95,
     text2: lightGrey70,
-    revText: white
+    revText: lightGrey95,
   },
   shadows: {
     lg: `0px 4px 40px ${greenGlow}`,
