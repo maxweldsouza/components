@@ -23,6 +23,7 @@ type ColorType = {
   text: string;
   text2: string;
   revText: string;
+  error: string;
 };
 
 type ThemeColors = {
@@ -43,6 +44,7 @@ const light: ThemeColors = {
     text: darkGrey10,
     text2: darkGrey20,
     revText: lightGrey95,
+    error: red,
   },
   shadows: {
     lg: `0px 4px 40px ${shadow}`,
@@ -59,6 +61,7 @@ const dark: ThemeColors = {
     text: lightGrey95,
     text2: lightGrey70,
     revText: lightGrey95,
+    error: red,
   },
   shadows: {
     lg: `0px 4px 40px ${greenGlow}`,
@@ -96,7 +99,7 @@ type ThemeStructure = {
       md: string;
       lg: string;
       xl: string;
-    }
+    };
   };
 };
 
@@ -130,7 +133,7 @@ const theme: ThemeStructure = {
       md: '14px',
       lg: '16px',
       xl: '18px',
-    }
+    },
   },
 };
 
