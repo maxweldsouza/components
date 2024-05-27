@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import { useSetState } from 'react-use';
+import { SettingsType } from '../../../main/types';
 
-export default function useElectronStore(key, initialSettings) {
+export default function useElectronStore(
+  key: string,
+  initialSettings: SettingsType
+) {
   const [settings, setSettings] = useSetState(initialSettings);
 
   // Retrieve settings from Electron store on mount
