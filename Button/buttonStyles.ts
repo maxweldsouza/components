@@ -7,17 +7,17 @@ export default css`
   border: none;
   width: max-content;
   background: ${(p) =>
-    p.secondary ? p.theme.colors.background2 : p.theme.colors.buttonBackground};
-  color: ${(p) => (p.secondary ? p.theme.colors.revText : p.theme.colors.text)};
+    p.$secondary
+      ? p.theme.colors.background2
+      : p.theme.colors.buttonBackground};
+  color: ${(p) => (p.$secondary ? p.theme.colors.text : p.theme.colors.text)};
   &:hover {
     background: ${(p) =>
-      p.secondary
+      p.$secondary
         ? p.theme.colors.background
         : p.theme.colors.buttonBackground};
   }
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
 `;
-
-// TODO reduced motion
-// @media (prefers-reduced-motion) {
-//     transition: none;
-// }

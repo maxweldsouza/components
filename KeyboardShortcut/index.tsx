@@ -202,13 +202,10 @@ function KeyboardShortcut({ loading, value, onChange, ...props }) {
           placeholder="CommandOrControl+Y"
           onChange={(e) => setShortcut(e.target.value)}
         />
-        {isValid ? 'valid' : 'N'}
-        {loading ? 'loading' : 'N'}
         <Button
-          secondary
+          $secondary="true"
           disabled={!isValid}
-          onClick={(e) => {
-            console.log('e: ', e);
+          onClick={() => {
             onChange(shortcut);
           }}
         >
