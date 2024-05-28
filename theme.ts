@@ -72,7 +72,7 @@ const dark: ThemeColors = {
     background2: grey10,
     text: grey95,
     text2: grey70,
-    revText: grey95,
+    revText: grey10,
     error: red,
   },
   border: {
