@@ -4,17 +4,12 @@ import { SettingsType } from '../../../main/types';
 
 export default function useElectronStore(
   key: string,
-  initialSettings: SettingsType
+  initialSettings?: SettingsType
 ) {
-  const [settings, setSettings] = useSetState(initialSettings);
-
   // Retrieve settings from Electron store on mount
-  useEffect(() => {
-    const storedSettings = window.electron.store.get(key);
-    if (storedSettings) {
-      setSettings(storedSettings);
-    }
-  }, [key, setSettings]);
+  const storedSettings = window.electron.store.get(key) || initialSettings;
+
+  const [settings, setSettings] = useSetState(storedSettings);
 
   // Persist settings to Electron store whenever they change
   useEffect(() => {

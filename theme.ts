@@ -1,4 +1,4 @@
-const darkGrey5: string = 'hsl(0, 0%, 5%)';
+const grey5: string = 'hsl(0, 0%, 5%)';
 const grey10: string = 'hsl(0, 0%, 10%)';
 const grey20: string = 'hsl(0, 0%, 20%)';
 const grey30: string = 'hsl(0, 0%, 30%)';
@@ -24,6 +24,7 @@ type ColorType = {
   buttonBackground: string;
   background: string;
   background2: string;
+  background3: string;
   text: string;
   text2: string;
   revText: string;
@@ -49,6 +50,7 @@ const light: ThemeColors = {
     buttonBackground: blue,
     background: white,
     background2: white,
+    background3: lightBlue,
     text: grey10,
     text2: grey20,
     revText: grey95,
@@ -68,8 +70,9 @@ const dark: ThemeColors = {
     button: blue,
     buttonHover: lightBlue,
     buttonBackground: blue,
-    background: darkGrey5,
+    background: grey5,
     background2: grey10,
+    background3: grey20,
     text: grey95,
     text2: grey70,
     revText: grey10,
