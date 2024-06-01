@@ -28,7 +28,7 @@ export function set(key, val) {
   store.set(key, val);
 }
 
-export function initialize(key, value) {
+export function initializeStoreData(key, value) {
   const current = store.get(key);
   if (!current) {
     store.set(key, value);
