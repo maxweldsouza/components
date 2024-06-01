@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ExclamationCircleIcon } from '@heroicons/react/24/solid';
+import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
 import styles from './styles';
 
 const Container = styled.div`

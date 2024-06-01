@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../Button';
 import TextInput from '../TextInput';
 import Label from '../Label';
+import BottomSheet from '../BottomSheet';
 
 const modifiers = [
   'Command',
@@ -190,12 +191,53 @@ const Container = styled.div`
   gap: ${(p) => p.theme.spacing.sm};
 `;
 
+const LabelContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const KeyContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+`;
+
+function KeySection({ keys, title }) {
+  return (
+    <>
+      <h2>{title}</h2>
+      <KeyContainer>
+        {keys.map((k) => {
+          return <div>{k}</div>;
+        })}
+      </KeyContainer>
+    </>
+  );
+}
+
+function Guide({ open, setOpen }) {
+  return (
+    <BottomSheet open={open} onClose={() => setOpen(false)}>
+      <h1>Key Codes</h1>
+      <KeySection title="Modifiers" keys={modifiers} />
+      <KeySection title="Number" keys={numberKeys} />
+    </BottomSheet>
+  );
+}
+
 function KeyboardShortcut({ loading, value, onChange, ...props }) {
   const [shortcut, setShortcut] = useState(value);
+  const [open, setOpen] = useState(false);
   const isValid = validateElectronAccelerator(shortcut);
   return (
     <>
-      <Label>Shortcut</Label>
+      <LabelContainer>
+        <Label>Shortcut</Label>
+        <div onClick={() => setOpen(true)}>Click here to view key codes.</div>
+      </LabelContainer>
+      <Guide open={open} setOpen={setOpen} />
       <Container>
         <TextInput
           value={shortcut}
