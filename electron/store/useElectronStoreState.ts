@@ -1,20 +1,31 @@
-import { useEffect } from 'react';
-import { useSetState } from 'react-use';
-import { SettingsType } from '../../../main/types';
+import { useEffect, useState } from 'react';
 
-export default function useElectronStore(
-  key: string,
-  initialSettings?: SettingsType
-) {
-  // Retrieve settings from Electron store on mount
-  const storedSettings = window.electron.store.get(key) || initialSettings;
+export default function useElectronStore(key: string) {
+  const storedSettings = window.electron.store.get(key);
 
-  const [settings, setSettings] = useSetState(storedSettings);
+  const [settings, setSettings] = useState(storedSettings);
 
-  // Persist settings to Electron store whenever they change
   useEffect(() => {
-    window.electron.store.set(key, settings);
-  }, [key, settings]);
+    const unsubscribe = window.electron.store.onKeyChange(
+      key,
+      (k, newValue, oldValue) => {
+        setSettings(newValue);
+      }
+    );
+    return () => {
+      unsubscribe();
+    };
+  }, [key]);
 
-  return [settings, setSettings];
+  return [
+    settings,
+    (newValue) => {
+      const merged = {
+        ...settings,
+        ...newValue,
+      };
+      window.electron.store.set('settings', merged);
+      setSettings(merged);
+    },
+  ];
 }
