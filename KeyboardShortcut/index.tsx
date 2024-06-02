@@ -4,6 +4,7 @@ import Button from '../Button';
 import TextInput from '../TextInput';
 import Label from '../Label';
 import BottomSheet from '../BottomSheet';
+import Key from '../Key/index.web';
 
 const modifiers = [
   'Command',
@@ -145,7 +146,7 @@ const otherKeys = [
   'PrintScreen',
 ];
 
-const numPadKeys = [
+const numPadNumberKeys = [
   'num0',
   'num1',
   'num2',
@@ -156,12 +157,9 @@ const numPadKeys = [
   'num7',
   'num8',
   'num9',
-  'numdec',
-  'numadd',
-  'numsub',
-  'nummult',
-  'numdiv',
 ];
+
+const numPadKeys = ['numdec', 'numadd', 'numsub', 'nummult', 'numdiv'];
 
 const allKeys = [].concat(
   modifiers,
@@ -170,7 +168,8 @@ const allKeys = [].concat(
   functionKeys,
   punctuationKeys,
   otherKeys,
-  numPadKeys
+  numPadKeys,
+  numPadNumberKeys
 );
 
 const allKeysMap = new Map();
@@ -200,20 +199,18 @@ const LabelContainer = styled.div`
 const KeyContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: ${(p) => p.theme.spacing.sm};
   flex-wrap: wrap;
+  align-items: baseline;
 `;
 
 function KeySection({ keys, title }) {
   return (
-    <>
-      <h2>{title}</h2>
-      <KeyContainer>
-        {keys.map((k) => {
-          return <div>{k}</div>;
-        })}
-      </KeyContainer>
-    </>
+    <KeyContainer>
+      {keys.map((k) => {
+        return <Key key={k}>{k}</Key>;
+      })}
+    </KeyContainer>
   );
 }
 
@@ -221,8 +218,23 @@ function Guide({ open, setOpen }) {
   return (
     <BottomSheet open={open} onClose={() => setOpen(false)}>
       <h1>Key Codes</h1>
-      <KeySection title="Modifiers" keys={modifiers} />
-      <KeySection title="Number" keys={numberKeys} />
+      Use any of the keys below separated by a "+".
+      <h2>Alphanumeric Keys</h2>
+      <KeyContainer>
+        <Key>A</Key>to<Key>Z</Key>
+        <Key>0</Key>to<Key>9</Key>
+      </KeyContainer>
+      <h2>Function Keys</h2>
+      <KeyContainer>
+        <Key>F1</Key>to<Key>F24</Key>
+      </KeyContainer>
+      <h2>Modifiers</h2>
+      <KeySection keys={modifiers} />
+      <h2>Numpad</h2>
+      <KeySection keys={numPadKeys} />
+      <h2>Other keys</h2>
+      <KeySection keys={otherKeys} />
+      {/* <KeySection title="Punctuation" keys={punctuationKeys} /> */}
     </BottomSheet>
   );
 }
@@ -235,6 +247,7 @@ function KeyboardShortcut({ loading, value, onChange, ...props }) {
     <>
       <LabelContainer>
         <Label>Shortcut</Label>
+        {/* TODO accessible button */}
         <div onClick={() => setOpen(true)}>Click here to view key codes.</div>
       </LabelContainer>
       <Guide open={open} setOpen={setOpen} />
