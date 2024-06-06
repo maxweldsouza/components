@@ -11,7 +11,9 @@ const grey90: string = 'hsl(0, 0%, 90%)';
 const grey95: string = 'hsl(0, 0%, 95%)';
 const blue: string = '#1c6493';
 const lightBlue: string = '#408cbd';
+const lightRed: string = '#bb4e4e';
 const red: string = '#9d1e1e';
+const darkRed: string = '#640b0b';
 const greenGlow: string = 'rgba(111,178,255,0.4)';
 const shadow: string = 'hsla(0,0%,0%,0.3)';
 // const shadow: string = 'rgba(0, 0, 0, 0.4)';
@@ -25,6 +27,7 @@ type ColorType = {
   background: string;
   background2: string;
   background3: string;
+  errorBackground: string;
   text: string;
   text2: string;
   revText: string;
@@ -51,6 +54,7 @@ const light: ThemeColors = {
     background: white,
     background2: white,
     background3: lightBlue,
+    errorBackground: lightRed,
     text: grey10,
     text2: grey20,
     revText: grey95,
@@ -73,6 +77,7 @@ const dark: ThemeColors = {
     background: grey5,
     background2: grey10,
     background3: grey20,
+    errorBackground: darkRed,
     text: grey95,
     text2: grey70,
     revText: grey10,

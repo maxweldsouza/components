@@ -10,7 +10,7 @@ const ErrorContainer = styled.div`
 `;
 
 function Error({ error }) {
-  if (!error.message) return;
+  if (!error.message) return null;
   return <ErrorContainer>{error.message}</ErrorContainer>;
 }
 

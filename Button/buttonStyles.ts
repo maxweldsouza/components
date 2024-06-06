@@ -20,4 +20,7 @@ export default css`
   @media (prefers-reduced-motion) {
     transition: none;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;

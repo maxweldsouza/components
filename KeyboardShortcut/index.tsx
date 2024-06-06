@@ -219,20 +219,17 @@ function Guide({ open, setOpen }) {
     <BottomSheet open={open} onClose={() => setOpen(false)}>
       <h1>Key Codes</h1>
       Use any of the keys below separated by a "+".
-      <h2>Alphanumeric Keys</h2>
       <KeyContainer>
         <Key>A</Key>to<Key>Z</Key>
         <Key>0</Key>to<Key>9</Key>
-      </KeyContainer>
-      <h2>Function Keys</h2>
-      <KeyContainer>
         <Key>F1</Key>to<Key>F24</Key>
+        <Key>num0</Key>to<Key>num9</Key>
       </KeyContainer>
-      <h2>Modifiers</h2>
+      <h3>Modifiers</h3>
       <KeySection keys={modifiers} />
-      <h2>Numpad</h2>
+      <h3>Numpad</h3>
       <KeySection keys={numPadKeys} />
-      <h2>Other keys</h2>
+      <h3>Other keys</h3>
       <KeySection keys={otherKeys} />
       {/* <KeySection title="Punctuation" keys={punctuationKeys} /> */}
     </BottomSheet>
@@ -253,6 +250,7 @@ function KeyboardShortcut({ loading, value, onChange, ...props }) {
       <Guide open={open} setOpen={setOpen} />
       <Container>
         <TextInput
+          $error={!isValid}
           value={shortcut}
           placeholder="CommandOrControl+Y"
           onChange={(e) => setShortcut(e.target.value)}
