@@ -65,7 +65,7 @@ const light: ThemeColors = {
     md: `solid 2px ${grey10}`,
   },
   shadows: {
-    lg: `0px 4px 40px ${shadow}`,
+    lg: `0px 4px 40px ${greenGlow}`,
     bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
   },
 };

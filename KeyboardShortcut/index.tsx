@@ -5,6 +5,7 @@ import TextInput from '../TextInput';
 import Label from '../Label';
 import BottomSheet from '../BottomSheet';
 import Key from '../Key/index.web';
+import TextButton from '../TextButton';
 
 const modifiers = [
   'Command',
@@ -244,8 +245,13 @@ function KeyboardShortcut({ loading, value, onChange, ...props }) {
     <>
       <LabelContainer>
         <Label>Shortcut</Label>
-        {/* TODO accessible button */}
-        <div onClick={() => setOpen(true)}>Click here to view key codes.</div>
+        <TextButton
+          onClick={(e) => {
+            setOpen(true);
+          }}
+        >
+          Key codes
+        </TextButton>
       </LabelContainer>
       <Guide open={open} setOpen={setOpen} />
       <Container>
