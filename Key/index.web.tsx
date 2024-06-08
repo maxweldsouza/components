@@ -6,7 +6,7 @@ const Container = styled.div`
   border: solid 1px #adadad;
   padding: ${(p) => p.theme.spacing.sm};
   border-radius: 5px;
-  color: #adadad;
+  color: ${(p) => p.theme.colors.text2};
   background-color: rgba(255, 255, 255, 0.15);
 `;
 

@@ -12,4 +12,5 @@ export default css`
   max-width: 100%;
   width: 100%;
   padding: ${(p) => p.theme.spacing.md} ${(p) => p.theme.spacing.md};
+  color: ${(p) => p.theme.colors.text};
 `;

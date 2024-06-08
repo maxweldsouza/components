@@ -9,12 +9,12 @@ const grey70: string = 'hsl(0, 0%, 70%)';
 const grey80: string = 'hsl(0, 0%, 80%)';
 const grey90: string = 'hsl(0, 0%, 90%)';
 const grey95: string = 'hsl(0, 0%, 95%)';
-const blue: string = '#1c6493';
+const blue: string = '#288ac9';
 const lightBlue: string = '#408cbd';
 const lightRed: string = '#bb4e4e';
 const red: string = '#9d1e1e';
 const darkRed: string = '#640b0b';
-const greenGlow: string = 'rgba(111,178,255,0.4)';
+const glow: string = 'rgba(111,178,255,0.4)';
 const shadow: string = 'hsla(0,0%,0%,0.3)';
 // const shadow: string = 'rgba(0, 0, 0, 0.4)';
 const white: string = 'hsl(0,0%,100%)';
@@ -52,8 +52,8 @@ const light: ThemeColors = {
     buttonHover: lightBlue,
     buttonBackground: blue,
     background: white,
-    background2: white,
-    background3: lightBlue,
+    background2: grey95,
+    background3: grey90,
     errorBackground: lightRed,
     text: grey10,
     text2: grey20,
@@ -65,7 +65,7 @@ const light: ThemeColors = {
     md: `solid 2px ${grey10}`,
   },
   shadows: {
-    lg: `0px 4px 40px ${greenGlow}`,
+    lg: `0px 4px 40px ${glow}`,
     bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
   },
 };
@@ -88,7 +88,7 @@ const dark: ThemeColors = {
     md: `solid 2px ${grey90}`,
   },
   shadows: {
-    lg: `0px 4px 40px ${greenGlow}`,
+    lg: `0px 4px 40px ${glow}`,
     bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
   },
 };
@@ -121,6 +121,7 @@ type ThemeStructure = {
       xl: string;
     };
   };
+  outlineStyle: string;
 };
 
 const theme: ThemeStructure = {
@@ -151,6 +152,7 @@ const theme: ThemeStructure = {
       xl: '18px',
     },
   },
+  outlineStyle: 'dashed',
 };
 
 type Theme = ThemeStructure & ThemeColors;

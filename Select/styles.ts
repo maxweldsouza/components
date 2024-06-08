@@ -7,4 +7,5 @@ export default css`
   border-radius: ${(p: IThemeProps) => p.theme.borderRadius.md};
   padding: ${(p: IThemeProps) => p.theme.spacing.md}
     ${(p: IThemeProps) => p.theme.spacing.sm};
+  color: ${(p: IThemeProps) => p.theme.colors.text};
 `;

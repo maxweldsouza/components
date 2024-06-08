@@ -13,12 +13,13 @@ const CloseIcon = styled(XMarkIcon)`
   height: 2rem;
   width: 2rem;
   padding: 1.5em 2em;
+  color: ${(p) => p.theme.colors.text};
 `;
 
 const Dialog = styled.div`
   border-radius: 10px;
-  background-color: var(--background);
-  color: var(--text-color);
+  background-color: ${(p) => p.theme.colors.background};
+  color: ${(p) => p.theme.colors.text};
   position: fixed;
   bottom: 0;
   left: 0;

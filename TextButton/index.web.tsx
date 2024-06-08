@@ -5,6 +5,7 @@ const TextButton = styled.button`
   padding: 0;
   border: none;
   cursor: pointer;
+  color: ${(p) => p.theme.colors.text};
 `;
 
 export default TextButton;
