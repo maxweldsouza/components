@@ -7,15 +7,21 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   gap: ${(p) => p.theme.spacing.md};
-  align-items: center;
+  align-items: start;
   ${styles}
+`;
+
+const MessageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${(p) => p.theme.spacing.md};
 `;
 
 function Alert({ children }) {
   return (
     <Container>
       <ExclamationCircleIcon width={24} />
-      {children}
+      <MessageContainer>{children}</MessageContainer>
     </Container>
   );
 }

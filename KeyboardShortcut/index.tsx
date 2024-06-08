@@ -256,9 +256,9 @@ function KeyboardShortcut({ loading, value, onChange, ...props }) {
       <Guide open={open} setOpen={setOpen} />
       <Container>
         <TextInput
-          $error={!isValid}
+          $error={!isValid && !!shortcut}
           value={shortcut}
-          placeholder="CommandOrControl+Y"
+          placeholder="Type a shortcut like Shift+Ctrl+X"
           onChange={(e) => setShortcut(e.target.value)}
         />
         <Button
