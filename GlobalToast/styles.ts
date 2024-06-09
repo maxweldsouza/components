@@ -10,8 +10,6 @@ export default css`
   font-size: ${(p) => p.theme.font.size.md};
   padding: ${(p) => p.theme.spacing.md};
   border-radius: ${(p) => p.theme.borderRadius.md};
-  opacity: ${(p) => (p.$visible ? 1 : 0)};
-  transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
 `;
 /*
   &:hover {
