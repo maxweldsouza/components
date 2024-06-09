@@ -11,9 +11,6 @@ export default css`
   padding: ${(p) => p.theme.spacing.md};
   border-radius: ${(p) => p.theme.borderRadius.md};
   opacity: ${(p) => (p.$visible ? 1 : 0)};
+  transform: translateY(${(p) => (p.$visible ? 0 : '30px')});
   transition: transform 1000ms ease-in-out, opacity 1000ms ease-in-out;
 `;
-/*
-  &:hover {
-  }
- */

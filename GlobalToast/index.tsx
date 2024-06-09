@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useMemo, useState } from 'react';
 import Toast from '../Toast';
+import useMountAnimation from '../hooks/useMountAnimation';
 
 export const ToastContext = createContext({
   message: '',
@@ -7,25 +8,16 @@ export const ToastContext = createContext({
   showToast: (msg: any, durationMs?: number) => {},
 });
 
-const showDuration = 5000;
-const animationDurationMs = 2000;
-
 function GlobalToast({ children }: React.PropsWithChildren) {
   const [message, setMessage] = useState('');
-  const [visible, setVisible] = useState(false);
+  const [show, setShow] = useState(false);
 
-  const showToast = useCallback((msg, duration = showDuration) => {
+  const { visible, mounted } = useMountAnimation(show);
+
+  const showToast = useCallback((msg, duration = 5000) => {
     setMessage(msg);
-    setTimeout(() => {
-      setVisible(true);
-    }, 0);
-
-    setTimeout(() => {
-      setVisible(false);
-      setTimeout(() => {
-        // setMessage('');
-      }, animationDurationMs);
-    }, duration - animationDurationMs);
+    setShow(true);
+    setTimeout(() => setShow(false), duration);
   }, []);
 
   const value = useMemo(() => {
@@ -36,7 +28,7 @@ function GlobalToast({ children }: React.PropsWithChildren) {
   }, [message, showToast]);
   return (
     <ToastContext.Provider value={value}>
-      {message && <Toast $visible={visible}>{message}</Toast>}
+      {mounted && <Toast $visible={visible}>{message}</Toast>}
       {children}
     </ToastContext.Provider>
   );
