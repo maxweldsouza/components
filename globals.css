@@ -91,6 +91,12 @@ body {
   outline-width: 2px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :focus {
+    outline-color: white;
+  }
+}
+
 /*.container {*/
 /*  padding: 1em;*/
 /*  margin: 0 auto;*/
