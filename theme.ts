@@ -7,6 +7,7 @@ const grey50: string = 'hsl(0, 0%, 50%)';
 const grey60: string = 'hsl(0, 0%, 60%)';
 const grey70: string = 'hsl(0, 0%, 70%)';
 const grey80: string = 'hsl(0, 0%, 80%)';
+const grey85: string = 'hsl(0, 0%, 85%)';
 const grey90: string = 'hsl(0, 0%, 90%)';
 const grey95: string = 'hsl(0, 0%, 95%)';
 const blue: string = '#288ac9';

@@ -86,7 +86,7 @@ body {
 }
 
 :focus {
-  outline-style: dashed;
+  outline-style: solid;
   outline-color: black;
   outline-width: 2px;
 }
