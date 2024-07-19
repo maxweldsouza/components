@@ -92,6 +92,9 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+  }
   :focus {
     outline-color: white;
   }
