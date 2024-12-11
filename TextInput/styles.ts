@@ -8,7 +8,7 @@ export default css`
   box-shadow: none;
   border: none;
   background-color: ${(p) =>
-    p.$error ? p.theme.colors.errorBackground : p.theme.colors.background2};
+    p.$error ? p.theme.colors.errorBackground : p.theme.colors.background3};
   max-width: 100%;
   width: 100%;
   padding: ${(p) => p.theme.spacing.md} ${(p) => p.theme.spacing.md};

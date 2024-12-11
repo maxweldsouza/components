@@ -28,7 +28,6 @@ interface Props {
 function BoxSelectOption({ children, value, ...props }: Props) {
   const context = useContext(BoxSelectContext);
   const checked = context.selectedValue === value;
-  console.log('context, value: ', context, value, checked);
   return (
     <Option
       {...props}

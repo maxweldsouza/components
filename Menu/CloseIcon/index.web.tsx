@@ -6,11 +6,15 @@ import {IThemeProps} from "../../theme";
 const CloseIcon = styled(XMarkIcon)`
   top: 0;
   right: 0;
-  height: 2rem;
-  width: 2rem;
+  height: 100px;
+  width: 100px;
   padding: 1.5em 2em;
-  transform-origin: 100% 0;
   z-index: ${(p: IThemeProps) => p.theme.zIndex.closeIcon};
+  position: absolute;
+  transition:  transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(125%);
+  }
 `
 /*
   visibility: ${(p) => p.visible ? 'visible' : 'hidden'};
