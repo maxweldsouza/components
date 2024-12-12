@@ -150,7 +150,7 @@ const theme: ThemeStructure = {
       sm: '12px',
       md: '14px',
       lg: '16px',
-      xl: '18px',
+      xl: '48px',
     },
   },
   outlineStyle: 'dashed',

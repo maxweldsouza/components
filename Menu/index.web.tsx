@@ -19,7 +19,7 @@ function Menu({ open, setOpen, children }) {
           setOpen(true);
         }}
       />
-      <Dialog visible={!!open} ref={ref}>
+      <Dialog $visible={!!open} ref={ref}>
         <NormalContainer>
           <CloseIcon
             onClick={(e) => {
