@@ -5,6 +5,7 @@ import { Icon } from "./Icon";
 import Dialog from "./Dialog";
 import CloseIcon from "./CloseIcon";
 import {useClickAway, useKey, useKeyPressEvent} from "react-use";
+import Backdrop from "@/app/shared/Backdrop/index.web";
 
 function Menu({ open, setOpen, children }) {
   const ref = useRef(null);
@@ -30,6 +31,7 @@ function Menu({ open, setOpen, children }) {
           {children}
         </NormalContainer>
       </Dialog>
+    <Backdrop $show={open} />
     </div>
   );
 }

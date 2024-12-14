@@ -2,7 +2,6 @@ import {css} from "../../styled-components";
 import {IThemeProps} from "../../theme";
 
 export default css`
-  box-shadow: ${(p: IThemeProps) => p.theme.shadows.lg};
   background-color: ${(p: IThemeProps) => p.theme.colors.background2};
   position: fixed;
   top: ${props => props.$position === 'center' ? '50%' : 0};
