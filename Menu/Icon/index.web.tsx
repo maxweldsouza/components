@@ -12,4 +12,5 @@ export const Icon = styled(Bars2Icon)`
   &:hover {
     transform: scaleX(1.2);
   }
+  z-index: ${p => p.theme.zIndex.menuIcon};
 `
