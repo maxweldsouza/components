@@ -96,6 +96,7 @@ const dark: ThemeColors = {
 
 type ThemeStructure = {
   zIndex: {
+    rightClickMenu: number;
     modal: number;
     backdrop: number;
     closeIcon: number;
@@ -127,6 +128,7 @@ type ThemeStructure = {
 
 const theme: ThemeStructure = {
   zIndex: {
+    rightClickMenu: 50,
     closeIcon: 40,
     modal: 30,
     menuIcon: 20,
