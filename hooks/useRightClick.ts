@@ -13,5 +13,5 @@ export default function useRightClick() {
     setShowMenu(true);
   };
   const onClose = () => setShowMenu(false);
-  return [showMenu, position, onContextMenu, onClose];
+  return {showMenu, position, onContextMenu, onClose};
 }

@@ -5,9 +5,13 @@ const Container = styled.div`
   padding: 8px 12px;
   cursor: pointer;
 `
-function RightClickMenuItem({ children, onClick }) {
+function RightClickMenuItem({ children, onClick, onClose }) {
+    // TODO get onClose from ctx?
     return (
-        <Container onClick={onClick}>{children}</Container>
+        <Container onClick={() => {
+            onClick()
+            onClose()
+        }}>{children}</Container>
     );
 }
 
