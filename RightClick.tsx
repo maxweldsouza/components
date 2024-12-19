@@ -9,7 +9,6 @@ const Container = styled.div`
   z-index: ${p => p.theme.zIndex.rightClickMenu};
   background: #162126;
 `
-// TODO switch to styled components
 function RightClick({ children, position, onClose, showMenu }) {
   const ref = useRef(null);
   useClickAway(ref, onClose);
