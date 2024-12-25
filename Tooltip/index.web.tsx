@@ -35,7 +35,7 @@ function Tooltip({ children, tooltip }) {
   const hover = useHover(ref);
   return (
     <Container ref={ref}>
-      {hover && <TooltipContainer>{tooltip}</TooltipContainer>}
+      {hover && tooltip && <TooltipContainer>{tooltip}</TooltipContainer>}
       {children}
     </Container>
   );

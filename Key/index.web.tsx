@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   font-size: ${(p) => p.theme.font.size.sm};
-  border: solid 1px #adadad;
-  padding: ${(p) => p.theme.spacing.sm};
+  padding: ${(p) => p.theme.spacing.xs} ${(p) => p.theme.spacing.sm};
   border-radius: 5px;
   color: ${(p) => p.theme.colors.text2};
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(51, 72, 87);
 `;
 
 function Key({ children }) {

@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 200px;
   border-radius: 4px;
   z-index: ${p => p.theme.zIndex.rightClickMenu};
-  background: #162126;
+  background: #0f172a;
 `
 function RightClick({ children, position, onClose, showMenu }) {
   const ref = useRef(null);
