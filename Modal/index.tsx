@@ -5,7 +5,7 @@ import CloseIcon from "@/app/shared/Menu/CloseIcon/index.web";
 import Backdrop from "@/app/shared/Backdrop/index.web";
 import {useClickAway, useKey} from "react-use";
 
-function Modal({ open, setOpen, children }) {
+function Modal({ open, setOpen, children, position='center' }) {
     const ref = useRef(null)
     useClickAway(ref, () => {
         setOpen(false);
@@ -15,7 +15,7 @@ function Modal({ open, setOpen, children }) {
     });
     return (
         <>
-            <Dialog $visible={open} $position={"center"} ref={ref}>
+            <Dialog $visible={open} $position={position} ref={ref}>
                 <NormalContainer>
                     <CloseIcon
                         onClick={(e) => {

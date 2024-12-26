@@ -10,13 +10,14 @@ const Container = styled.button`
   justify-content: space-between;
   width: 100%;
   background: transparent;
+  border-radius: 0;
   &:first-of-type {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
   &:last-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 `
 function RightClickMenuItem({ children, onClick, onClose }) {
