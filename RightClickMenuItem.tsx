@@ -10,6 +10,7 @@ const Container = styled.button`
   justify-content: space-between;
   width: 100%;
   background: transparent;
+  opacity: ${p => p.disabled ? "0.2" : "1"};
   border-radius: 0;
   &:first-of-type {
     border-top-left-radius: 4px;
@@ -26,7 +27,7 @@ function RightClickMenuItem({ children, onClick, onClose }) {
         <Container onClick={() => {
             onClick()
             onClose()
-        }}>{children}</Container>
+        }} disabled={!onClick}>{children}</Container>
     );
 }
 
