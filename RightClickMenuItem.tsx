@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const Container = styled.button`
@@ -10,7 +10,7 @@ const Container = styled.button`
   justify-content: space-between;
   width: 100%;
   background: transparent;
-  opacity: ${p => p.disabled ? "0.2" : "1"};
+  opacity: ${(p) => (p.disabled ? "0.2" : "1")};
   border-radius: 0;
   &:first-of-type {
     border-top-left-radius: 4px;
@@ -20,15 +20,20 @@ const Container = styled.button`
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
   }
-`
+`;
 function RightClickMenuItem({ children, onClick, onClose }) {
-    // TODO get onClose from ctx?
-    return (
-        <Container onClick={() => {
-            onClick()
-            onClose()
-        }} disabled={!onClick}>{children}</Container>
-    );
+  // TODO get onClose from ctx?
+  return (
+    <Container
+      onClick={() => {
+        onClick();
+        onClose();
+      }}
+      disabled={!onClick}
+    >
+      {children}
+    </Container>
+  );
 }
 
 export default RightClickMenuItem;
