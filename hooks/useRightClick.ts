@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useKey } from "react-use";
 
 export default function useRightClick() {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,5 +14,6 @@ export default function useRightClick() {
     setShowMenu(true);
   };
   const onClose = () => setShowMenu(false);
-  return {showMenu, position, onContextMenu, onClose};
+  useKey("Escape", onClose);
+  return { showMenu, position, onContextMenu, onClose };
 }

@@ -21,7 +21,7 @@ const Container = styled.button`
     border-bottom-right-radius: 4px;
   }
 `;
-function RightClickMenuItem({ children, onClick, onClose }) {
+function RightClickMenuItem({ children, onClick, onClose, disabled = false }) {
   // TODO get onClose from ctx?
   return (
     <Container
@@ -29,7 +29,7 @@ function RightClickMenuItem({ children, onClick, onClose }) {
         onClick();
         onClose();
       }}
-      disabled={!onClick}
+      disabled={!onClick || disabled}
     >
       {children}
     </Container>
