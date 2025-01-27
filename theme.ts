@@ -1,25 +1,25 @@
-const grey5: string = 'hsl(0, 0%, 5%)';
-const grey10: string = 'hsl(0, 0%, 10%)';
-const grey20: string = 'hsl(0, 0%, 20%)';
-const grey30: string = 'hsl(0, 0%, 30%)';
-const grey40: string = 'hsl(0, 0%, 40%)';
-const grey50: string = 'hsl(0, 0%, 50%)';
-const grey60: string = 'hsl(0, 0%, 60%)';
-const grey70: string = 'hsl(0, 0%, 70%)';
-const grey80: string = 'hsl(0, 0%, 80%)';
-const grey85: string = 'hsl(0, 0%, 85%)';
-const grey90: string = 'hsl(0, 0%, 90%)';
-const grey95: string = 'hsl(0, 0%, 95%)';
-const blue: string = '#288ac9';
-const lightBlue: string = '#4e9bcc';
-const lightRed: string = '#bb4e4e';
-const red: string = '#9d1e1e';
-const darkRed: string = '#640b0b';
-const glow: string = 'rgba(111,178,255,0.4)';
-const shadow: string = 'hsla(0,0%,0%,0.3)';
+const grey5: string = "hsl(0, 0%, 5%)";
+const grey10: string = "hsl(0, 0%, 10%)";
+const grey20: string = "hsl(0, 0%, 20%)";
+const grey30: string = "hsl(0, 0%, 30%)";
+const grey40: string = "hsl(0, 0%, 40%)";
+const grey50: string = "hsl(0, 0%, 50%)";
+const grey60: string = "hsl(0, 0%, 60%)";
+const grey70: string = "hsl(0, 0%, 70%)";
+const grey80: string = "hsl(0, 0%, 80%)";
+const grey85: string = "hsl(0, 0%, 85%)";
+const grey90: string = "hsl(0, 0%, 90%)";
+const grey95: string = "hsl(0, 0%, 95%)";
+const blue: string = "#288ac9";
+const lightBlue: string = "#4e9bcc";
+const lightRed: string = "#bb4e4e";
+const red: string = "#9d1e1e";
+const darkRed: string = "#640b0b";
+const glow: string = "rgba(111,178,255,0.4)";
+const shadow: string = "hsla(0,0%,0%,0.3)";
 // const shadow: string = 'rgba(0, 0, 0, 0.4)';
-const white: string = 'hsl(0,0%,100%)';
-const black: string = 'black';
+const white: string = "hsl(0,0%,100%)";
+const black: string = "black";
 
 type ColorType = {
   button: string;
@@ -67,7 +67,7 @@ const light: ThemeColors = {
   },
   shadows: {
     lg: `0px 4px 40px ${glow}`,
-    bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
+    bottomSheet: "0px -20px 180px rgba(255, 248, 111, 0.4)",
   },
 };
 const dark: ThemeColors = {
@@ -90,7 +90,7 @@ const dark: ThemeColors = {
   },
   shadows: {
     lg: `0px 4px 40px ${glow}`,
-    bottomSheet: '0px -20px 180px rgba(255, 248, 111, 0.4)',
+    bottomSheet: "0px -20px 180px rgba(255, 248, 111, 0.4)",
   },
 };
 
@@ -135,27 +135,27 @@ const theme: ThemeStructure = {
     backdrop: 10,
   },
   borderRadius: {
-    sm: '4px',
-    md: '8px',
-    lg: '16px',
+    sm: "4px",
+    md: "8px",
+    lg: "16px",
   },
   spacing: {
-    xs: '4px',
-    sm: '8px',
-    md: '16px',
-    lg: '32px',
-    xl: '48px',
+    xs: "4px",
+    sm: "8px",
+    md: "16px",
+    lg: "32px",
+    xl: "48px",
   },
   font: {
-    family: 'sans-serif',
+    family: "sans-serif",
     size: {
-      sm: '12px',
-      md: '14px',
-      lg: '16px',
-      xl: '36px',
+      sm: "12px",
+      md: "14px",
+      lg: "16px",
+      xl: "36px",
     },
   },
-  outlineStyle: 'dashed',
+  outlineStyle: "dashed",
 };
 
 type Theme = ThemeStructure & ThemeColors;
@@ -165,12 +165,9 @@ export interface IThemeProps {
 }
 
 export const getTheme = (mode): Theme => {
-  const colorTheme = mode === 'dark' ? dark : light;
+  const colorTheme = mode === "dark" ? dark : light;
   return {
     ...colorTheme,
     ...theme,
   };
 };
-
-// TODO remove
-export default theme;

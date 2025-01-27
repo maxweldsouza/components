@@ -1,5 +1,5 @@
-import { IThemeProps } from '../theme';
-import { css } from '../styled-components';
+import { IThemeProps } from "../theme";
+import { css } from "../styled-components";
 
 function getBackground(p) {
   if (p.$secondary) {
@@ -15,7 +15,7 @@ function getHoverBackground(p) {
   if (p.$secondary) {
     return p.theme.colors.background;
   }
-  return p.theme.colors.buttonBackground;
+  return p.theme.colors.buttonHover;
 }
 export default css`
   border-radius: ${(p) => p.theme.borderRadius.sm};
@@ -24,6 +24,7 @@ export default css`
   width: max-content;
   background: ${getBackground};
   color: ${(p) => (p.$secondary ? p.theme.colors.text : p.theme.colors.text)};
+  font-size: 1.4rem;
   &:hover {
     background: ${getHoverBackground};
   }
