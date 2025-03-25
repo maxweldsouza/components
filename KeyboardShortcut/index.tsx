@@ -219,7 +219,7 @@ function Guide({ open, setOpen }) {
   return (
     <BottomSheet open={open} onClose={() => setOpen(false)}>
       <h1>Key Codes</h1>
-      Use any of the keys below separated by a "+".
+      Use any of the keys below separated by a {`'"'`}.
       <KeyContainer>
         <Key>A</Key>to<Key>Z</Key>
         <Key>0</Key>to<Key>9</Key>
